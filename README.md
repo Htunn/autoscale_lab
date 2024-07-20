@@ -49,6 +49,14 @@ To run the Node.js application, follow these steps:
 
     This command will execute the performance tests defined in hello_test.js, allowing you to analyze the scalability and performance of your Node.js application. 
 
+    For AWS LoadBalancer Testing replace http://localhost:3000 with AWS LoadBalancer CName Record in hello_test.js
+
+    ```
+    let res = http.get('http://localhost:3000/hello');
+    ```
+
+
+
 
 ## Using Bash Script to automate the manual steps
 
