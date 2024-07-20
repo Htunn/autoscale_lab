@@ -93,3 +93,37 @@ chmod +x test_project.sh
 ./test_project.sh
 ```
 This script builds the application, attempts to troubleshoot if the build fails, and runs performance tests using Grafana k6. It will notify you if the performance testing completes successfully or fails, allowing you to check the test scripts and environment for any issues.
+
+
+
+
+## Docker Container Setup
+
+This project includes a Dockerfile for building a Docker image that simplifies the deployment process. Follow these steps to build and run your application within a Docker container.
+
+### Building the Docker Image
+
+To build the Docker image, navigate to the root directory of the project where the Dockerfile is located and run the following command:
+
+```bash
+./docker_build.sh
+```
+
+Replace `your-app-name` with the name you wish to give your Docker image.
+
+### Running the Docker Container
+
+After building the image, you can run your application inside a Docker container using the following command:
+
+```bash
+docker run -d -p 3000:3000 --name your-container-name your-app-name
+```
+
+This command runs the Docker container in detached mode, maps port 3000 of the container to port 3000 on the host, and names the container `your-container-name`. Replace `your-container-name` with the name you wish to give your Docker container and `your-app-name` with the name of your Docker image.
+
+### Accessing the Application
+
+With the Docker container running, you can access the application by navigating to `http://localhost:3000` in your web browser.
+```
+
+Ensure you replace `your-app-name` and `your-container-name` with appropriate names for your Docker image and container. This section provides a basic guide for users to build and run the Dockerized version of your application.
