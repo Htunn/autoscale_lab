@@ -61,6 +61,8 @@ This section guides you through the setup of Node.js, TypeScript, and Grafana k6
 To install Node.js, TypeScript, and Grafana k6, run the setup script provided in the repository:
 
 ```bash
+cd bash_script
+chmod +x init_project.sh
 ./init_project.sh
 ```
 
@@ -75,6 +77,8 @@ After setting up your environment, you can run performance tests on your applica
 To execute the performance tests, use the test script as follows:
 
 ```bash
+cd bash_script
+chmod +x test_project.sh
 ./test_project.sh
 ```
 This script builds the application, attempts to troubleshoot if the build fails, and runs performance tests using Grafana k6. It will notify you if the performance testing completes successfully or fails, allowing you to check the test scripts and environment for any issues.
