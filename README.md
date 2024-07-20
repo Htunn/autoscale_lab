@@ -25,6 +25,7 @@ To run the Node.js application, follow these steps:
    Compile the TypeScript files to JavaScript:
 
    ```bash
+   npm install
    npm run build
    npm start
 
@@ -33,7 +34,9 @@ To run the Node.js application, follow these steps:
     If you encounter issues during the build process, you can clean your build directory and try building the application again:
     ```bash
     npm run clean
+    npm install
     npm run build
+    npm start
 
 
 3. **Performance Testing with Grafana k6**
