@@ -20,8 +20,8 @@ RUN npm run build
 RUN ls -la 
 RUN ls -la dist
 
-# Expose the application port (replace 3000 with your application port)
-EXPOSE 3000
+# Expose the application port (replace 80 with your application port)
+EXPOSE 80
 
 # Start the Node.js application with SSL enabled
 CMD ["node", "dist/index.js"]

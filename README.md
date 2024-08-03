@@ -49,10 +49,10 @@ To run the Node.js application, follow these steps:
 
     This command will execute the performance tests defined in hello_test.js, allowing you to analyze the scalability and performance of your Node.js application. 
 
-    For AWS LoadBalancer Testing replace http://localhost:3000 with AWS LoadBalancer CName Record in hello_test.js
+    For AWS LoadBalancer Testing replace http://localhost:80 with AWS LoadBalancer CName Record in hello_test.js
 
     ```
-    let res = http.get('http://localhost:3000/hello');
+    let res = http.get('http://localhost:80/hello');
     ```
 
 
@@ -116,14 +116,14 @@ Replace `your-app-name` with the name you wish to give your Docker image.
 After building the image, you can run your application inside a Docker container using the following command:
 
 ```bash
-docker run -d -p 3000:3000 --name your-container-name your-app-name
+docker run -d -p 80:80 --name your-container-name your-app-name
 ```
 
-This command runs the Docker container in detached mode, maps port 3000 of the container to port 3000 on the host, and names the container `your-container-name`. Replace `your-container-name` with the name you wish to give your Docker container and `your-app-name` with the name of your Docker image.
+This command runs the Docker container in detached mode, maps port 80 of the container to port 80 on the host, and names the container `your-container-name`. Replace `your-container-name` with the name you wish to give your Docker container and `your-app-name` with the name of your Docker image.
 
 ### Accessing the Application
 
-With the Docker container running, you can access the application by navigating to `http://localhost:3000` in your web browser.
+With the Docker container running, you can access the application by navigating to `http://localhost:80` in your web browser.
 ```
 
 Ensure you replace `your-app-name` and `your-container-name` with appropriate names for your Docker image and container. This section provides a basic guide for users to build and run the Dockerized version of your application.

@@ -13,7 +13,7 @@ export let options = {
 };
 
 export default function () {
-  let res = http.get('http://localhost:3000/hello');
+  let res = http.get('http://localhost:80/hello');
   check(res, { 'status was 200': (r) => r.status == 200 });
   sleep(1);
 }
