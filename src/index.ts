@@ -1,14 +1,22 @@
 import express from 'express';
-import os from 'os'; // Import the os module
+import os from 'os';
 
 const app = express();
-const port = 80; // You can choose any port
+const port = 80;
 
 function startServer() {
   try {
+    // Middleware to log request details
+    app.use((req, res, next) => {
+      console.log(`Received request: ${req.method} ${req.url}`);
+      next();
+    });
+
     app.get('/hello', (req, res) => {
-      const serverName = os.hostname(); // Get the hostname
-      res.send(`hello from ${serverName}`);
+      const serverName = os.hostname();
+      const responseMessage = `hello from ${serverName}`;
+      console.log(`Sending response: ${responseMessage}`);
+      res.send(responseMessage);
     });
 
     app.listen(port, () => {
